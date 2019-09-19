@@ -3,7 +3,6 @@ import './Controls.scss';
 import store, {UPDATE_HUNGER_LEVEL, UPDATE_LOVED_LEVEL, UPDATE_TIREDNESS_LEVEL} from '../../redux/store';
 
 export default function Controls(props) {
-
   const {hungerLevel, lovedLevel, tirednessLevel} = props;
 
   const decreaseHunger = () => {

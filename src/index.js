@@ -41,11 +41,11 @@ class App extends React.Component {
 
     setInterval(() => {
      this.setRandomInterval();
-    }, 3000) // adjust how soon to change any interval in ms
+    }, 3000) // adjust how soon to change a random interval in ms
   }
 
   setRandomInterval() {
-    let min = 500, max = 1500; // adjust health interval speed possibilites here in ms
+    let min = 500, max = 1500; // adjust health interval speed possibilities here in ms
     let newInterval = Math.floor(Math.random() * (max - min + 1) + min);
     let levelChooser = Math.floor(Math.random() * (3 - 1 + 1) + 1);
 

@@ -2,7 +2,6 @@ import React from 'react';
 import './Dashboard.scss';
 
 export default function Dashboard (props) {
-
   const {hungerLevel, lovedLevel, tirednessLevel} = props;
 
   return (
