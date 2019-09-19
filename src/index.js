@@ -63,7 +63,7 @@ class App extends React.Component {
     }
   }
 
-  // update timers 
+  // update intervals 
 
   updateHungerTimer(interval) {
     setInterval(() => {
