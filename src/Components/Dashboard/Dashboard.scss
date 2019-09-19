@@ -1,0 +1,46 @@
+@mixin page(
+  $sectionHeight,
+  $paneFlDir,
+  $indicatorWidth,
+  $indicatorFlDir,
+  $progressWidth
+){
+  #Dashboard {
+    height: $sectionHeight;
+    background-color: rgb(234, 208, 208);
+
+    #runaway-count {
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+
+    #progress-pane {
+      height: 100%;
+      display: flex;
+      flex-direction: $paneFlDir;
+      justify-content: space-between;
+      align-items: center;
+
+      .progress-indicators {
+        width: $indicatorWidth;
+        display: flex;
+        flex-direction: $indicatorFlDir;
+        justify-content: space-between;
+        align-items: center;
+
+        progress {
+          width: $progressWidth;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  @include page(25vh, column, 100%, row, 60%);
+}
+
+@media only screen and (min-width: 600px) {
+  @include page(20vh, row, 33%, column, 95%);
+}

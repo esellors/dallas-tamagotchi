@@ -1,0 +1,39 @@
+@mixin page(
+  $sectionHeight,
+  $controlsFlDir, 
+  $controlsWidth, 
+  $controlsHeight
+){
+  #Controls {
+    height: $sectionHeight;
+    display: flex;
+    flex-direction: $controlsFlDir;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(157, 148, 221);
+  
+    .controls-divs {
+      width: $controlsWidth;
+      height: $controlsHeight;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #000;
+      background-color: rgb(210, 206, 241);
+      cursor: pointer;
+      user-select: none;
+  
+      &:hover {
+        background-color: rgb(231, 234, 205)
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  @include page(25vh, column, 100%, 33%);
+}
+
+@media only screen and (min-width: 600px) {
+  @include page(20vh, row, 33%, 100%);
+}

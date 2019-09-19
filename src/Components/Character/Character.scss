@@ -1,0 +1,30 @@
+@mixin page(
+  $sectionHeight,
+  $dogFaceWidth, 
+  $dogExprWidth
+){
+  #Character {
+    height: $sectionHeight;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #dogFace {
+      width: $dogFaceWidth;
+    }
+
+    #dogFaceExpression {
+      width: $dogExprWidth;
+      position: absolute;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  @include page(50vh, 400px, 100px);
+}
+
+@media only screen and (min-width: 600px) {
+  @include page(60vh, 600px, 175px);
+}
